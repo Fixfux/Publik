@@ -529,118 +529,104 @@ def cancl(grup, target):
 def bacqr(group)
     print("BACKUP QR")
     try:
-       G = cl.getGroup(msg.to)
-       G.preventedJoinByTicket = False
-       cl.updateGroup(G)
-        invsend = 0
-       Ticket = cl.reissueGroupTicket(msg.to)
-        ka.acceptGroupInvitationByTicket(msg.to,Ticket)
+        G = ka.getGroup(op.param1)
+        G.preventedJoinByTicket = False
+        ka.updateGroup(G)
+        Ticket = ka.reissueGroupTicket(msg.to)
         kb.acceptGroupInvitationByTicket(msg.to,Ticket)
         kc.acceptGroupInvitationByTicket(msg.to,Ticket)
         kd.acceptGroupInvitationByTicket(msg.to,Ticket)
         ke.acceptGroupInvitationByTicket(msg.to,Ticket)
         kf.acceptGroupInvitationByTicket(msg.to,Ticket)
         kg.acceptGroupInvitationByTicket(msg.to,Ticket)
-        G = ka.getGroup(msg.to)
+        G = ka.getGroup(op.param1)
         G.preventedJoinByTicket = True
-     except:
-              try:
-                 G = cl.getGroup(msg.to)
-                 G.preventedJoinByTicket = False
-                 cl.updateGroup(G)
-                 invsend = 0
-                 Ticket = cl.reissueGroupTicket(msg.to)
-                  ka.acceptGroupInvitationByTicket(msg.to,Ticket)
-                  kb.acceptGroupInvitationByTicket(msg.to,Ticket)
-                  kc.acceptGroupInvitationByTicket(msg.to,Ticket)
-                  kd.acceptGroupInvitationByTicket(msg.to,Ticket)
-                  ke.acceptGroupInvitationByTicket(msg.to,Ticket)
-                  kf.acceptGroupInvitationByTicket(msg.to,Ticket)
-                  kg.acceptGroupInvitationByTicket(msg.to,Ticket)
-                  G = ka.getGroup(msg.to)
-                  G.preventedJoinByTicket = True
-             except:
-                     try:
-                         G = cl.getGroup(msg.to)
-                         G.preventedJoinByTicket = False
-                         cl.updateGroup(G)
-                          invsend = 0
-                         Ticket = cl.reissueGroupTicket(msg.to)
-                         ka.acceptGroupInvitationByTicket(msg.to,Ticket)
-                         kb.acceptGroupInvitationByTicket(msg.to,Ticket)
+    except:
+        try:
+            G = kb.getGroup(op.param1)
+            G.preventedJoinByTicket = False
+            cl.updateGroup(G)
+            Ticket = kb.reissueGroupTicket(msg.to)
+            ka.acceptGroupInvitationByTicket(msg.to,Ticket)
+            kc.acceptGroupInvitationByTicket(msg.to,Ticket)
+            kd.acceptGroupInvitationByTicket(msg.to,Ticket)
+            ke.acceptGroupInvitationByTicket(msg.to,Ticket)
+            kf.acceptGroupInvitationByTicket(msg.to,Ticket)
+            kg.acceptGroupInvitationByTicket(msg.to,Ticket)
+            G = kb.getGroup(op.param1)
+            G.preventedJoinByTicket = True
+        except:
+            try:
+                G = kc.getGroup(op.param1)
+                G.preventedJoinByTicket = False
+                kc.updateGroup(G)
+                Ticket = kc.reissueGroupTicket(msg.to)
+                ka.acceptGroupInvitationByTicket(msg.to,Ticket)
+                kb.acceptGroupInvitationByTicket(msg.to,Ticket)
+                kd.acceptGroupInvitationByTicket(msg.to,Ticket)
+                ke.acceptGroupInvitationByTicket(msg.to,Ticket)
+                kf.acceptGroupInvitationByTicket(msg.to,Ticket)
+                kg.acceptGroupInvitationByTicket(msg.to,Ticket)
+                G = kc.getGroup(op.param1)
+                G.preventedJoinByTicket = True
+            except:
+                try:
+                    G = kd.getGroup(op.param1)
+                    G.preventedJoinByTicket = False
+                    kd.updateGroup(G)
+                    Ticket = kd.reissueGroupTicket(msg.to)
+                    ka.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    kb.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    kc.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ke.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    kf.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    kg.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    G = kd.getGroup(op.param1)
+                    G.preventedJoinByTicket = True
+                except:
+                    try:
+                        G = ke.getGroup(op.param1)
+                        G.preventedJoinByTicket = False
+                        ke.updateGroup(G)
+                        Ticket = ke.reissueGroupTicket(msg.to)
+                        ka.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        kb.acceptGroupInvitationByTicket(msg.to,Ticket)
                         kc.acceptGroupInvitationByTicket(msg.to,Ticket)
-                         kd.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        ke.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        kd.acceptGroupInvitationByTicket(msg.to,Ticket)
                         kf.acceptGroupInvitationByTicket(msg.to,Ticket)
                         kg.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        G = ka.getGroup(msg.to)
+                        G = ke.getGroup(op.param1)
                         G.preventedJoinByTicket = True
-                   except:
-                                try:
-                                    G = cl.getGroup(msg.to)
-                                    G.preventedJoinByTicket = False
-                                    cl.updateGroup(G)
-                                    invsend = 0
-                                    Ticket = cl.reissueGroupTicket(msg.to)
-                                    ka.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kb.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kc.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kd.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    ke.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kf.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kg.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    G = ka.getGroup(msg.to)
-                                    G.preventedJoinByTicket = True
-                               except:
-                                try:
-                                    G = cl.getGroup(msg.to)
-                                    G.preventedJoinByTicket = False
-                                    cl.updateGroup(G)
-                                    invsend = 0
-                                    Ticket = cl.reissueGroupTicket(msg.to)
-                                    ka.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kb.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kc.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kd.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    ke.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kf.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kg.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    G = ka.getGroup(msg.to)
-                                    G.preventedJoinByTicket = True
-                             except:
-                                try:
-                                    G = cl.getGroup(msg.to)
-                                    G.preventedJoinByTicket = False
-                                    cl.updateGroup(G)
-                                    invsend = 0
-                                    Ticket = cl.reissueGroupTicket(msg.to)
-                                    ka.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kb.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kc.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kd.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    ke.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kf.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kg.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    G = ka.getGroup(msg.to)
-                                    G.preventedJoinByTicket = True
-                              except:
-                                try:
-                                    G = cl.getGroup(msg.to)
-                                    G.preventedJoinByTicket = False
-                                    cl.updateGroup(G)
-                                    invsend = 0
-                                    Ticket = cl.reissueGroupTicket(msg.to)
-                                    ka.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kb.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kc.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kd.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    ke.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kf.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    kg.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                    G = ka.getGroup(msg.to)
-                                    G.preventedJoinByTicket = True
-                               except:
-                                       pass
+                    except:
+                        try:
+                            G = kf.getGroup(op.param1)
+                            G.preventedJoinByTicket = False
+                            kf.updateGroup(G)
+                            Ticket = kf.reissueGroupTicket(msg.to)
+                            ka.acceptGroupInvitationByTicket(msg.to,Ticket)
+                            kb.acceptGroupInvitationByTicket(msg.to,Ticket)
+                            kc.acceptGroupInvitationByTicket(msg.to,Ticket)
+                            kd.acceptGroupInvitationByTicket(msg.to,Ticket)
+                            ke.acceptGroupInvitationByTicket(msg.to,Ticket)
+                            kg.acceptGroupInvitationByTicket(msg.to,Ticket)
+                            G = kf.getGroup(op.param1)
+                            G.preventedJoinByTicket = True
+                        except:
+                            try:
+                                G = kg.getGroup(op.param1)
+                                G.preventedJoinByTicket = False
+                                kf.updateGroup(G)
+                                Ticket = kf.reissueGroupTicket(msg.to)
+                                ka.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                kb.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                kc.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                kd.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                ke.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                kf.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                G = kf.getGroup(op.param1)
+                                G.preventedJoinByTicket = True
+                            except:
+                                pass
 def lockqr(grup):
     G = ka.getGroup(grup)
     G.preventedJoinByTicket = True
