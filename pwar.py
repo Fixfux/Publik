@@ -491,40 +491,79 @@ def atend():
 def attck(grup, target):
     print("DEP KICK MEMBER")
     try:
-        asd= random.choice(ABC).kickoutFromGroup(grup, [target])
+        asd= ka.kickoutFromGroup(grup, [target])
         if asd != None:
             mbutfaild
     except:
         try:
-            asd= random.choice(ABC).kickoutFromGroup(grup, [target])
+            asd= kb.kickoutFromGroup(grup, [target])
             if asd != None:
                 mbutfaild
         except:
             try:
-                asd= random.choice(ABC).kickoutFromGroup(grup, [target])
+                asd= kc.kickoutFromGroup(grup, [target])
                 if asd != None:
                     mbutfaild
             except:
-                pass
-
+                try:
+                    asd= kd.kickoutFromGroup(grup, [target])
+                    if asd != None:
+                        mbutfaild
+                except:
+                    try:
+                        asd= ke.kickoutFromGroup(grup, [target])
+                        if asd != None:
+                            mbutfaild
+                    except:
+                        try:
+                            asd= kf.kickoutFromGroup(grup, [target])
+                            if asd != None:
+                                mbutfaild
+                        except:
+                            try:
+                                asd= kg.kickoutFromGroup(grup, [target])
+                                if asd != None:
+                                    mbutfaild
+                            except:
+                                pass
 def cancl(grup, target):
     print("DEP CANCLLE MEMBER")
     try:
-        asd= random.choice(ABC).cancelGroupInvitation(grup, [target])
+        asd= ka.cancelGroupInvitation(grup, [target])
         if asd != None:
             mbutfail
     except:
         try:
-            asd= random.choice(ABC).cancelGroupInvitation(grup, [target])
+            asd= kb.cancelGroupInvitation(grup, [target])
             if asd != None:
                 mbutfaild
         except:
             try:
-                asd= random.choice(ABC).cancelGroupInvitation(grup, [target])
+                asd= kc.cancelGroupInvitation(grup, [target])
                 if asd != None:
                     mbutfaild
             except:
-                pass
+                try:
+                    asd= kd.cancelGroupInvitation(grup, [target])
+                    if asd != None:
+                        mbutfaild
+                except:
+                    try:
+                        asd= ke.cancelGroupInvitation(grup, [target])
+                        if asd != None:
+                            mbutfaild
+                    except:
+                        try:
+                            asd= kf.cancelGroupInvitation(grup, [target])
+                            if asd != None:
+                                mbutfaild
+                        except:
+                            try:
+                                asd= kg.cancelGroupInvitation(grup, [target])
+                                if asd != None:
+                                    mbutfaild
+                        except:
+                            pass
 
 def bacqr(group)
     print("BACKUP QR")
