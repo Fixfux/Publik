@@ -562,10 +562,10 @@ def cancl(grup, target):
                                 asd= kg.cancelGroupInvitation(grup, [target])
                                 if asd != None:
                                     mbutfaild
-                        except:
-                            pass
+                            except:
+                                pass
 
-def bacqr(group)
+def backqr(group)
     print("BACKUP QR")
     try:
         G = ka.getGroup(op.param1)
@@ -884,8 +884,9 @@ def bot(op):
                 t14.start()
                 t15 = Thread(target=black, args=(op.param2,))
                 t15.start()
-            if op.param3 in Bots:
-                t16 = Thread(target=backp, args=(op.param1, op.param3))
+            except Exception as e:
+            if e.code == 35:
+                t16 = Thread(target=backqr, args=(op.param1,))
                 t16.start()
             if op.param3 in admin:
                 t17 = Thread(target=invt, args=(op.param1, op.param3))
@@ -904,8 +905,12 @@ def bot(op):
                 t21.start()
                 t22 = Thread(target=black, args=(op.param2,))
                 t22.start()
-
-
+        if op.type == 18:
+            kickcount += 1
+            
+        if op.type == 31:
+            cancelcount += 1
+	
         if op.type == 13:
             if mid in op.param3:
                 if InexWar["autoLeave"] == True:
