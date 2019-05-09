@@ -108,7 +108,7 @@ Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Xmid]
 Mbut = admin + staff
 
 welcome = []
-antijs = []
+protectjs = []
 protectjoin = []
 protectqr = []
 protectkick = []
@@ -178,8 +178,8 @@ InexWar = {
     "Responpm":"ᴀᴅᴀ ᴀᴘᴀ ᴋᴀᴋ ᴛᴀᴅɪ ᴛᴀɢ sᴀʏᴀ ᴅɪ ɢʀᴜᴘ?",
     "welcome":"丂乇ㄥ卂爪卂ㄒ 乃乇尺Ꮆ卂乃ㄩ几Ꮆ Ҝ卂Ҝ,,, 丂乇爪ㄖᎶ卂 乃乇ㄒ卂卄",
     "leave":"See you next time again ...",
-    "comment":"ᴀᴜᴛᴏ ʟɪᴋᴇ ɴ ᴄᴏᴍᴍᴇɴᴛ ᴅᴏɴᴇ\nвʏ.ᴛᴇᴀᴍ ⊶ ɪɴᴇxʙᴏᴛs ⊷ \nline.me/ti/p/~denjaka_inex",
-    "message":"тᴇяıмᴀ кᴀsıн suᴅᴀн ᴀᴅᴅ sᴀʏᴀ \nвʏ.ᴛᴇᴀᴍ ⊶ ɪɴᴇxʙᴏᴛs ⊷ \nline.me/ti/p/~denjaka_inex",
+    "comment":"ᴀᴜᴛᴏ ʟɪᴋᴇ ɴ ᴄᴏᴍᴍᴇɴᴛ ᴅᴏɴᴇ\nвʏ.ᴛᴇᴀᴍ ɪᴅ ʙᴏᴛs\nline.me/ti/p/~idbots_ku1",
+    "message":"тᴇяıмᴀ кᴀsıн suᴅᴀн ᴀᴅᴅ sᴀʏᴀ \nвʏ.ᴛᴇᴀᴍ ɪᴅ ʙᴏᴛs\nline.me/ti/p/~idbots_ku1",
 }
 read = {
     "readPoint":{},
@@ -247,7 +247,7 @@ def runtime(secs):
 def mentionMembers(to, mid):
     try:
         arrData = ""
-        textx = "╭━─────────────────━╮\n│╭━───────────────━╮\n││             XTC_IΠΣX\n│├━───────────────━╯\n││ 1."
+        textx = "╭━─────────────────━╮\n│╭━───────────────━╮\n││             \n│├━───────────────━╯\n││ 1."
         arr = []
         no = 1
         num = 2
@@ -267,7 +267,7 @@ def mentionMembers(to, mid):
                     no = "\n╚══[ {} ]".format(str(line.getGroup(to).name))
                 except:
                     no = "\n╚══[ Success ]"
-        cl.sendMessage(to, textx+"│├━───────────────━╮\n││            XTC_IΠΣX  \n│╰━───────────────━╯\n╰━─────────────────━╯", {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+        cl.sendMessage(to, textx+"│├━───────────────━╮\n││             \n│╰━───────────────━╯\n╰━─────────────────━╯", {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
         #cl.sendMessage(to,"ᴛᴏᴛᴀʟ : {} ᴍᴇᴍʙᴇʀs".format(str(len(mid))))
     except Exception as error:
         cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
@@ -303,7 +303,7 @@ def sendMentionV3(to, text="", mids=[]):
 def siderMembers(to, mid):
     try:
         arrData = ""
-        textx = "●Nahh lohh \n  ●Mbeb ".format(str(len(mid)))
+        textx = "nah kan \n  kak ".format(str(len(mid)))
         arr = []
         no = 1
         num = 2
@@ -769,24 +769,24 @@ def black(target):
 def menu():
     key = Setmain["keyCommand"]
     key = key.title()
-    menuMessage = "╭━──────────────━╮\n│➢      xᴛᴄ ᴍᴇɴᴜ\n╰━──────────────━╯\n╭━──────────────━╮\n" + \
-                               "│➢ ᴍᴇ\n" + \
-                               "│➢ ᴍʏʙᴏᴛ\n" + \
-                               "│➢ ʙᴀᴄᴋᴜᴘ\n" + \
-                               "│➢ sᴘᴇᴇᴅ-sᴘ\n" + \
-                               "│➢ ɪɴ/ᴏᴜᴛ\n" + \
-                               "│➢ ᴋᴇʟᴜᴀʀ/ᴍᴀsᴜᴋ\n" + \
-                               "│➢ ᴛᴀɢ/ɪɴᴇx\n" + \
-                               "│➢ ᴘɪɴɢ\n" + \
-                               "│➢ ᴄᴇᴋ/ᴄᴇᴋ ᴊs\n" + \
-                               "│➢ sᴏʀʏ @\n" + \
-                               "│➢ ᴘʀᴀɴᴋ ɴ ᴄʟɪɴɢ\n" + \
-                               "│➢ ʀᴇᴍᴏᴠᴇ ᴄʜᴀᴛ\n" + \
-                               "│➢ 1ᴜᴘ-7ᴜᴘ/ᴊs ᴜᴘ\n" + \
-                               "│➢ 1ɴᴀᴍᴇ-7ɴᴀᴍᴇ/ ᴊs ɴᴀᴍᴇ\n"+ \
-                               "│➢ ʙᴀɴʟɪsᴛ\n" + \
-                               "│➢ ᴄʟᴇᴀʀʙᴀɴ\n" + \
-                               "│➢ ʀᴇғʀᴇsʜ\n" + \
+    menuMessage = "╭━──────────────━╮\n│       ᴍᴇɴᴜ\n╰━──────────────━╯\n╭━──────────────━╮\n" + \
+                               "│ ᴍᴇ\n" + \
+                               "│ ᴍʏʙᴏᴛ\n" + \
+                               "│ ʙᴀᴄᴋᴜᴘ\n" + \
+                               "│ sᴘᴇᴇᴅ-sᴘ\n" + \
+                               "│ ɪɴ/ᴏᴜᴛ\n" + \
+                               "│ ᴋᴇʟᴜᴀʀ/ᴍᴀsᴜᴋ\n" + \
+                               "│ ᴛᴀɢ/ɪɴᴇx\n" + \
+                               "│ ᴘɪɴɢ\n" + \
+                               "│ ᴄᴇᴋ/ᴄᴇᴋ ᴊs\n" + \
+                               "│ sᴏʀʏ @\n" + \
+                               "│ ᴘʀᴀɴᴋ ɴ ᴄʟɪɴɢ\n" + \
+                               "│ ʀᴇᴍᴏᴠᴇ ᴄʜᴀᴛ\n" + \
+                               "│ 1ᴜᴘ-7ᴜᴘ/ᴊs ᴜᴘ\n" + \
+                               "│ 1ɴᴀᴍᴇ-7ɴᴀᴍᴇ/ ᴊs ɴᴀᴍᴇ\n"+ \
+                               "│ ʙᴀɴʟɪsᴛ\n" + \
+                               "│ ᴄʟᴇᴀʀʙᴀɴ\n" + \
+                               "│ ʀᴇғʀᴇsʜ\n" + \
                                "╰━──────────────━╯"
     return menuMessage
 
@@ -894,20 +894,20 @@ def bot(op):
                 t5.start()
             if op.param2 in InexBots['blacklist']:
                 band.append(op.param2)
-                g = cl.getGroup(op.param1)
+                g = ka.getGroup(op.param1)
                 members = [contact.mid for contact in g.members]
                 for a in InexBots['blacklist']:
                     band += filter(lambda str: str == a, members)
                 if g.preventedJoinByTicket == False:
                     g.preventedJoinByTicket = True
-                    cl.updateGroup(g)
+                    ka.updateGroup(g)
                 for i in band:
                     try:
-                        cl.kickoutFromGroup(op.param1, [i])
+                        ka.kickoutFromGroup(op.param1, [i])
                     except:
                         continue
         if op.type == 19 or op.type == 32:
-            if op.param1 in antijs:
+            if op.param1 in protectjs:
                 print("PROTECT ANTIJS ON")
                 try:
                   if op.param3 in mid:
@@ -1931,32 +1931,34 @@ def bot(op):
                                    cl.sendText(msg.to,"Clearrrr ...")
                                except:
                                    pass
-                    if txt.lower().startswith("invite "):
-                        ext = text.split()
-                        number = ext[2]
-                        if number.isdigit():
-                            groups = cl.getGroupIdsJoined()
-                            if int(number) < len(groups) and int(number) >= 0:
-                                groupid = groups[int(number)]
-                                try:
-                                   cl.findAndAddContactsByMid(sender)
-                                   cl.inviteIntoGroup(groupid,[sender])
-                                   groupname = cl.getGroup(groupid).name
-                                   if not silent:cl.sendMessage(receiver,"Success invite group! %s"%groupname)
-                                except:
-                                   if not silent:cl.sendMessage(receiver," Permission denied contact in banlist")
+                        elif cmd.startswith("invite "):
+                           if msg._from in admin:
+                             ext = text.split()
+                             number = ext[2]
+                             if number.isdigit():
+                                 groups = cl.getGroupIdsJoined()
+                                 if int(number) < len(groups) and int(number) >= 0:
+                                     groupid = groups[int(number)]
+                                     try:
+                                         cl.findAndAddContactsByMid(sender)
+                                         cl.inviteIntoGroup(groupid,[sender])
+                                         groupname = cl.getGroup(groupid).name
+                                         cl.sendMessage(receiver,"Success invite group! %s"%groupname)
+                                     except:
+                                         cl.sendMessage(receiver," Permission denied contact in banlist")
 
-                    if txt.lower().startswith("leave "):
-                        ext = text.split()
-                        number = ext[2]
-                        if number.isdigit():
-                            groups = cl.getGroupIdsJoined()
-                            if int(number) < len(groups) and int(number) >= 0:
-                                groupid = groups[int(number)]
-                                groupname = cl.getGroup(groupid).name
-                                if not silent:cl.sendMessage(groupid,"!Bye~bye %s"%groupname)
-                                cl.leaveGroup(groupid)
-                                if not silent:cl.sendMessage(receiver,"Success leave group! %s"%groupname)
+                        elif cmd.startswith("leave "):
+                           if msg._from in admin:
+                             ext = text.split()
+                             number = ext[2]
+                             if number.isdigit():
+                                 groups = cl.getGroupIdsJoined()
+                                 if int(number) < len(groups) and int(number) >= 0:
+                                     groupid = groups[int(number)]
+                                     groupname = cl.getGroup(groupid).name
+                                     if not silent:cl.sendMessage(groupid,"!Bye~bye %s"%groupname)
+                                     cl.leaveGroup(groupid)
+                                     cl.sendMessage(receiver,"Success leave group! %s"%groupname)
 #==================================
 
                         elif cmd.startswith("broadcast: "):
@@ -2281,7 +2283,7 @@ def bot(op):
                                 js.sendMessage(msg.to,"Nama diganti jadi " + string + "")
 
 #===========BOT UPDATE============#
-                        elif cmd == "inex" or text.lower() == "tag":
+                        elif cmd == "sepi" or text.lower() == "tag":
                            if InexWar["selfbot"] == True:
                             if msg._from in admin:
                              group = cl.getGroup(msg.to)
@@ -2402,7 +2404,7 @@ def bot(op):
                                 kf.sendText(msg.to,"⪨⪩─┅❇͜͡нα∂ιя ѕιαρ Ꮖɛʍքʊʀ࿐\n⪨⪩─┅❇͜͡χт¢_i͓̽n͓̽e͓̽x͓̽_6.࿐")
                                 kg.sendText(msg.to,"⪨⪩─┅❇͜͡нα∂ιя ѕιαρ Ꮖɛʍքʊʀ࿐\n⪨⪩─┅❇͜͡χт¢_i͓̽n͓̽e͓̽x͓̽_7.࿐")
 
-                        if cmd == ".":
+                        if cmd == "/in":
                           if msg._from in admin or msg._from in Bots:
                             print("ALL BOT DI INVITE")
                             try:
@@ -2478,7 +2480,7 @@ def bot(op):
                                 G = cl.getGroup(msg.to)
                                 js.leaveGroup(msg.to)
 
-                        elif cmd == ",":
+                        elif cmd == "/out":
                           if msg._from in admin:
                             print("ALL BOT KELUAR GRUP")
                             try:
@@ -3427,14 +3429,20 @@ def bot(op):
                         elif cmd == "on":
                            if msg._from in admin:
                               protectqr.append(msg.to)
-                              protectjoin.append(msg.to)
-                              cl.sendMessage(msg.to, "「Bot Diaktifkan」")
+                              protectkick.append(msg.to)
+                              protectinvite.append(msg.to)
+                              protectcancel.append(msg.to)
+                              protectjs.append(msg.to)
+                              cl.sendMessage(msg.to, "Bot aktif")
 
                         elif cmd == "off":
                            if msg._from in admin:
                               protectqr.remove(msg.to)
-                              protectjoin.remove(msg.to)
-                              cl.sendMessage(msg.to, "「Bot Di nonaktifkan」")
+                              protectkick.remove(msg.to)
+                              protectinvite.remove(msg.to)
+                              protectcancel.remove(msg.to)
+                              protectjs.remove(msg.to)
+                              cl.sendMessage(msg.to, "Bot off")
 
                         elif 'Js ' in msg.text:
                            if msg._from in admin:
