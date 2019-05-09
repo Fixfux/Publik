@@ -3104,6 +3104,14 @@ def bot(op):
                                     targets.append(x["M"])
                                for target in targets:
                                        try:
+                                           cl.findAndAddContactsByMid(target)
+                                           ka.findAndAddContactsByMid(target)
+                                           kb.findAndAddContactsByMid(target)
+                                           kc.findAndAddContactsByMid(target)
+                                           kd.findAndAddContactsByMid(target)
+                                           ke.findAndAddContactsByMid(target)
+                                           kf.findAndAddContactsByMid(target)
+                                           kg.findAndAddContactsByMid(target)
                                            admin.append(target)
                                            cl.sendMessage(msg.to,"Berhasil menambahkan admin")
                                        except:
