@@ -907,7 +907,63 @@ def bot(op):
                         t35 = Thread(target=attck, args=(op.param1, [i])
                         t35.start()
                     except:
-                        continue
+                        try:
+                            band.append(op.param2)
+                            g = cl.getGroup(op.param1)
+                            members = [contact.mid for contact in g.members]
+                            for a in Idbots['blacklist']:
+                                band += filter(lambda str: str == a, members)
+                            for i in band:
+                                try:
+                                    t35 = Thread(target=attck, args=(op.param1, [i])
+                                    t35.start()
+                                except:
+                                    try:
+                                        band.append(op.param2)
+                                        g = cl.getGroup(op.param1)
+                                        members = [contact.mid for contact in g.members]
+                                        for a in Idbots['blacklist']:
+                                            band += filter(lambda str: str == a, members)
+                                        for i in band:
+                                            try:
+                                                t35 = Thread(target=attck, args=(op.param1, [i])
+                                                t35.start()
+                                            except:
+                                                try:
+                                                    band.append(op.param2)
+                                                    g = cl.getGroup(op.param1)
+                                                    members = [contact.mid for contact in g.members]
+                                                    for a in Idbots['blacklist']:
+                                                        band += filter(lambda str: str == a, members)
+                                                    for i in band:
+                                                        try:
+                                                            t35 = Thread(target=attck, args=(op.param1, [i])
+                                                            t35.start()
+                                                        except:
+                                                            try:
+                                                                band.append(op.param2)
+                                                                g = cl.getGroup(op.param1)
+                                                                members = [contact.mid for contact in g.members]
+                                                                for a in Idbots['blacklist']:
+                                                                    band += filter(lambda str: str == a, members)
+                                                                for i in band:
+                                                                    try:
+                                                                        t35 = Thread(target=attck, args=(op.param1, [i])
+                                                                        t35.start()
+                                                                    except:
+                                                                        try:
+                                                                            band.append(op.param2)
+                                                                            g = cl.getGroup(op.param1)
+                                                                            members = [contact.mid for contact in g.members]
+                                                                            for a in Idbots['blacklist']:
+                                                                                band += filter(lambda str: str == a, members)
+                                                                            for i in band:
+                                                                                try:
+                                                                                    t35 = Thread(target=attck, args=(op.param1, [i])
+                        t35.start()
+                    except:
+                        try:
+
 
         if op.type == 18:
             kickcount += 1
