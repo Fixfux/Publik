@@ -1110,87 +1110,22 @@ def bot(op):
                 t38 = Thread(target=lockqr, args=(op.param1,))
                 t38.start()
             if op.param2 in Idbots["blacklist"]:
-                try:
-                    band.append(op.param2)
-                    g = ka.getGroup(op.param1)
-                    members = [contact.mid for contact in g.members]
-                    for a in Idbots['blacklist']:
-                        band += filter(lambda str: str == a, members)
-                    for i in band:
-                        try:
-                            t39 = Thread(target=kakick, args=(op.param1, [i])
-                            t39.start()
-                        except:
-                            try:
-                                band.append(op.param2)
-                                g = kb.getGroup(op.param1)
-                                members = [contact.mid for contact in g.members]
-                                for a in Idbots['blacklist']:
-                                    band += filter(lambda str: str == a, members)
-                                for i in band:
-                                    try:
-                                        t40 = Thread(target=kbkick, args=(op.param1, [i])
-                                        t40.start()
-                                    except:
-                                        try:
-                                            band.append(op.param2)
-                                            g = kc.getGroup(op.param1)
-                                            members = [contact.mid for contact in g.members]
-                                            for a in Idbots['blacklist']:
-                                                band += filter(lambda str: str == a, members)
-                                            for i in band:
-                                                try:
-                                                    t41 = Thread(target=kckick, args=(op.param1, [i])
-                                                    t41.start()
-                                                except:
-                                                    try:
-                                                        band.append(op.param2)
-                                                        g = kd.getGroup(op.param1)
-                                                        members = [contact.mid for contact in g.members]
-                                                        for a in Idbots['blacklist']:
-                                                            band += filter(lambda str: str == a, members)
-                                                        for i in band:
-                                                            try:
-                                                                t42 = Thread(target=kdkick, args=(op.param1, [i])
-                                                                t42.start()
-                                                            except:
-                                                                try:
-                                                                    band.append(op.param2)
-                                                                    g = ke.getGroup(op.param1)
-                                                                    members = [contact.mid for contact in g.members]
-                                                                    for a in Idbots['blacklist']:
-                                                                        band += filter(lambda str: str == a, members)
-                                                                    for i in band:
-                                                                        try:
-                                                                            t43 = Thread(target=kekick, args=(op.param1, [i])
-                                                                            t43.start()
-                                                                        except:
-                                                                            try:
-                                                                                band.append(op.param2)
-                                                                                g = kf.getGroup(op.param1)
-                                                                                members = [contact.mid for contact in g.members]
-                                                                                for a in Idbots['blacklist']:
-                                                                                    band += filter(lambda str: str == a, members)
-                                                                                for i in band:
-                                                                                    try:
-                                                                                        t45 = Thread(target=kfkick, args=(op.param1, [i])
-                                                                                        t45.start()
-                                                                                    except:
-                                                                                        try:
-                                                                                            band.append(op.param2)
-                                                                                            g = kg.getGroup(op.param1)
-                                                                                            members = [contact.mid for contact in g.members]
-                                                                                            for a in Idbots['blacklist']:
-                                                                                                band += filter(lambda str: str == a, members)
-                                                                                            for i in band:
-                                                                                                try:
-                                                                                                    t45 = Thread(target=kgkick, args=(op.param1, [i])
-                                                                                                    t45.start()
-                                                                                                except:
-                                                                                                    continue
-
-
-
+                G = cl.getGroup(op.param1)
+                if G is None:
+                   pass
+              else:
+                   gMembMids = [contact.mid for contact in G.members]
+                   matched_list = []
+                   for tag in Idbots["blacklist"]:
+                           matched_list+=filter(lambda str: str == tag, gMembMids)
+                   if matched_list == []:
+                           pass
+                   for jj in matched_list:
+                       try:
+                           cl.kickoutFromGroup(op.param1,[jj])
+                       except:
+                           continue
+                   
         if op.type == 18:
             kickcount += 1
             
