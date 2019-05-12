@@ -935,8 +935,8 @@ def bot(op):
                     t13 = Thread(target=black, args=(op.param2,))
                     t13.start()
             if e.code == 35:
-                    t14 = Thread(target=cancl, args=(op.param1, op.param3))
-                    t14.start()
+                t14 = Thread(target=cancl, args=(op.param1, op.param3))
+                t14.start()
             if op.param3 in Idbots["blacklist"]:
                 if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                     t15 = Thread(target=cancl, args=(op.param1, op.param3))
@@ -946,8 +946,8 @@ def bot(op):
                     t17 = Thread(target=black, args=(op.param2,))
                     t17.start()
             if e.code == 35:
-                    t18 = Thread(target=cancl, args=(op.param1, op.param3))
-                    t18.start()
+                t18 = Thread(target=cancl, args=(op.param1, op.param3))
+                t18.start()
         if op.type ==19:
             if op.param1 in protectkick:
                 if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
@@ -967,7 +967,105 @@ def bot(op):
                     t24 = Thread(target=black, args=(op.param2,))
                     t24.start()
             if e.code == 35:
-                t
+                G = ka.getGroup(op.param1)
+                G.preventedJoinByTicket = False
+                ka.updateGroup(G)
+                Ticket = ka.reissueGroupTicket(op.param1)
+                ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                kd.acceptGroupInvitationByTicket(op.param1,Ticket)
+                ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                G.preventedJoinByTicket = True
+            except:
+                try:
+                    G = kb.getGroup(op.param1)
+                    G.preventedJoinByTicket = False
+                    kb.updateGroup(G)
+                    Ticket = kb.reissueGroupTicket(op.param1)
+                    ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    kd.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    G.preventedJoinByTicket = True
+                except:
+                    try:	
+                        G = kb.getGroup(op.param1)
+                        G.preventedJoinByTicket = False
+                        kb.updateGroup(G)
+                        Ticket = kb.reissueGroupTicket(op.param1)
+                        ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        kd.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G.preventedJoinByTicket = True
+                    except:
+                        try:
+                            G = kb.getGroup(op.param1)
+                            G.preventedJoinByTicket = False
+                            kb.updateGroup(G)
+                            Ticket = kb.reissueGroupTicket(op.param1)
+                            ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            kd.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                            G.preventedJoinByTicket = True
+                        except:
+                            try:
+                                G = kb.getGroup(op.param1)
+                                G.preventedJoinByTicket = False
+                                kb.updateGroup(G)
+                                Ticket = kb.reissueGroupTicket(op.param1)
+                                ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                kd.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                G.preventedJoinByTicket = True
+                            except:
+                                try:
+                                    G = kb.getGroup(op.param1)
+                                    G.preventedJoinByTicket = False
+                                    kb.updateGroup(G)
+                                    Ticket = kb.reissueGroupTicket(op.param1)
+                                    ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                    kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                    kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                    kd.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                    ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                    kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                    kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                    G.preventedJoinByTicket = True
+                                except:
+                                    try:
+                                        G = kb.getGroup(op.param1)
+                                        G.preventedJoinByTicket = False
+                                        kb.updateGroup(G)
+                                        Ticket = kb.reissueGroupTicket(op.param1)
+                                        ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                        kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                        kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                        kd.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                        ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                        kf.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                        kg.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                        G.preventedJoinByTicket = True
+                                    except:
+                                        continue
+			
             if op.param3 in admin:
                 if op.param2 not in Bots and op.param2 not in owner:
                     t25 = Thread(target=backp, args=(op.param1, op.param3))
@@ -1076,6 +1174,18 @@ def bot(op):
                                                                                     t45.start()
                                                                                 except:
                                                                                     try:
+                                                                                        band.append(op.param2)
+                                                                                        g = kg.getGroup(op.param1)
+                                                                                        members = [contact.mid for contact in g.members]
+                                                                                        for a in Idbots['blacklist']:
+                                                                                            band += filter(lambda str: str == a, members)
+                                                                                         for i in band:
+                                                                                             try:
+                                                                                                 t45 = Thread(target=kgkick, args=(op.param1, [i])
+                                                                                                 t45.start()
+                                                                                             except:
+                                                                                                 continue
+
 
 
         if op.type == 18:
