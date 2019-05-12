@@ -995,10 +995,10 @@ def bot(op):
                         G.preventedJoinByTicket = True
                     except:
                         try:	
-                            G = kb.getGroup(op.param1)
+                            G = kc.getGroup(op.param1)
                             G.preventedJoinByTicket = False
-                            kb.updateGroup(G)
-                            Ticket = kb.reissueGroupTicket(op.param1)
+                            kc.updateGroup(G)
+                            Ticket = kc.reissueGroupTicket(op.param1)
                             ka.acceptGroupInvitationByTicket(op.param1,Ticket)
                             kb.acceptGroupInvitationByTicket(op.param1,Ticket)
                             kc.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1009,10 +1009,10 @@ def bot(op):
                             G.preventedJoinByTicket = True
                         except:
                             try:
-                                G = kb.getGroup(op.param1)
+                                G = kd.getGroup(op.param1)
                                 G.preventedJoinByTicket = False
-                                kb.updateGroup(G)
-                                Ticket = kb.reissueGroupTicket(op.param1)
+                                kd.updateGroup(G)
+                                Ticket = kd.reissueGroupTicket(op.param1)
                                 ka.acceptGroupInvitationByTicket(op.param1,Ticket)
                                 kb.acceptGroupInvitationByTicket(op.param1,Ticket)
                                 kc.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1023,10 +1023,10 @@ def bot(op):
                                 G.preventedJoinByTicket = True
                             except:
                                 try:
-                                    G = kb.getGroup(op.param1)
+                                    G = ke.getGroup(op.param1)
                                     G.preventedJoinByTicket = False
-                                    kb.updateGroup(G)
-                                    Ticket = kb.reissueGroupTicket(op.param1)
+                                    ke.updateGroup(G)
+                                    Ticket = ke.reissueGroupTicket(op.param1)
                                     ka.acceptGroupInvitationByTicket(op.param1,Ticket)
                                     kb.acceptGroupInvitationByTicket(op.param1,Ticket)
                                     kc.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1037,10 +1037,10 @@ def bot(op):
                                     G.preventedJoinByTicket = True
                                 except:
                                     try:
-                                        G = kb.getGroup(op.param1)
+                                        G = kf.getGroup(op.param1)
                                         G.preventedJoinByTicket = False
-                                        kb.updateGroup(G)
-                                        Ticket = kb.reissueGroupTicket(op.param1)
+                                        kf.updateGroup(G)
+                                        Ticket = kf.reissueGroupTicket(op.param1)
                                         ka.acceptGroupInvitationByTicket(op.param1,Ticket)
                                         kb.acceptGroupInvitationByTicket(op.param1,Ticket)
                                         kc.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1051,10 +1051,10 @@ def bot(op):
                                         G.preventedJoinByTicket = True
                                     except:
                                         try:
-                                            G = kb.getGroup(op.param1)
+                                            G = kg.getGroup(op.param1)
                                             G.preventedJoinByTicket = False
-                                            kb.updateGroup(G)
-                                            Ticket = kb.reissueGroupTicket(op.param1)
+                                            kg.updateGroup(G)
+                                            Ticket = kg.reissueGroupTicket(op.param1)
                                             ka.acceptGroupInvitationByTicket(op.param1,Ticket)
                                             kb.acceptGroupInvitationByTicket(op.param1,Ticket)
                                             kc.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1121,10 +1121,24 @@ def bot(op):
                             pass
                     for jj in matched_list:
                         try:
-                            t39 = Thread(target=attck, args=(op.param1,[jj])
-                            t39.start()
+                            ka.kickoutFromGroup(op.param1,[jj])
                         except:
-                            pass
+                            try:
+                                kb.kickoutFromGroup(op.param1,[jj])
+                            except:
+                                try:
+                                    kc.kickoutFromGroup(op.param1,[jj])	
+                                except:
+                                    try:
+                                        kd.kickoutFromGroup(op.param1,[jj])
+                                    except:
+                                        try:
+                                            ke.kickoutFromGroup(op.param1,[jj])
+                                        except:
+                                            try:
+                                                kf.kickoutFromGroup(op.param1,[jj])
+                                            except:
+                                                pass
         if op.type == 18:
             kickcount += 1
             
@@ -3132,7 +3146,7 @@ def bot(op):
                             else:
                                 cl.sendMessage(to, 'Failed vultra kick member, please mention user you want to kick')
 
-                        elif cmd.startswith("sory "):
+                        elif cmd.startswith("go "):
                           print("BOT KICK MEMBER")
                           if msg._from in admin:
                             if 'MENTION' in msg.contentMetadata.keys()!= None:
